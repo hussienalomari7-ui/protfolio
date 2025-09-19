@@ -1,0 +1,269 @@
+/* ===== الأساسيات ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tahoma', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2b2d42, #8d99ae);
+  color: #edf2f4;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== الهيدر ===== */
+header {
+  background: rgba(0,0,0,0.6);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: hsl(299, 89%, 35%);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #edf2f4;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ef233c;
+}
+
+/* ===== قسم التعريف ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+.hero-img img {
+  width: 340px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0,0,0,0.5);
+  animation: pulse 3s infinite;
+}
+/* فقرة النص الإنجليزي */
+.english-text {
+  font-style: italic;       /* خط مائل */
+  color: #dcdcdc;           /* لون رمادي فاتح أنيق */
+  margin-top: 10px;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.hero-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #ef233c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  background: #d90429;
+  transform: scale(1.05);
+}
+
+/* ===== المهارات ===== */
+.skills {
+  padding: 60px 10%;
+  background: #2b2d42;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  background: #3a3d5c;
+  padding: 20px;
+  border-radius: 15px;
+  width: 120px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.skill-box i {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #ef233c;
+}
+
+.skill-box:hover {
+  transform: translateY(-10px);
+}
+
+/* ===== المشاريع ===== */
+.projects {
+  padding: 60px 10%;
+  background: #8d99ae;
+  color: #2b2d42;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: #edf2f4;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  transition: transform 0.3s;
+  box-shadow: 0px 8px 15px rgba(0,0,0,0.3);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ef233c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== التواصل ===== */
+.contact {
+  padding: 60px 10%;
+  background: #2b2d42;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input, 
+.contact textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.contact button {
+  padding: 12px;
+  background: #ef233c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.contact button:hover {
+  background: #d90429;
+  transform: scale(1.05);
+}
+
+/* ===== الفوتر ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a2e;
+  color: #edf2f4;
+}
+
+footer .socials a {
+  margin: 0 10px;
+  color: #ef233c;
+  font-size: 1.5em;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: #fff;
+}
+/* 🎨 ألوان خاصة بكل أيقونة */
+footer .socials a i.fa-github {
+  color: #333; /* رمادي غامق */
+}
+
+footer .socials a i.fa-linkedin {
+  color: #0A66C2; /* أزرق لينكدإن */
+}
+
+footer .socials a i.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, 
+              #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

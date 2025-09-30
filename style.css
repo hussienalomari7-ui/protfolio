@@ -119,11 +119,13 @@ nav ul li a:hover {
 }
 
 .skills-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
+
+
 
 .skill-box {
   background: #3a3d5c;
@@ -271,4 +273,24 @@ footer .socials a i.fa-medium {
 }
 footer .socials a i.fa-envelope {
   color: #c86e6e; /* أحمر Gmail */
+}
+.video-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.video-section h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.video-section video {
+  width: 100%;
+  max-width: 500px;   /* أقصى عرض للفيديو */
+  aspect-ratio: 16/9; /* يحافظ على التناسق بين العرض والطول */
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+.skill-box i.fa-python {
+  color: #3776AB; /* الأزرق الرسمي للبايثون */
 }

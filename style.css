@@ -124,11 +124,14 @@ nav ul li a:hover {
   gap: 30px;
   justify-items: center;
 }
+.skill-box i.fa-terminal {
+  color: #2ecc71; /* أخضر أنيق */
+}
 
 
 
 .skill-box {
-  background: #3a3d5c;
+  background: #414465;
   padding: 20px;
   border-radius: 15px;
   width: 120px;
@@ -139,7 +142,7 @@ nav ul li a:hover {
 .skill-box i {
   font-size: 3em;
   margin-bottom: 10px;
-  color: #ef233c;
+  color: #a092bd;
 }
 
 .skill-box:hover {

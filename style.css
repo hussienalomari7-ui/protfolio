@@ -297,3 +297,12 @@ footer .socials a i.fa-envelope {
 .skill-box i.fa-python {
   color: #3776AB; /* الأزرق الرسمي للبايثون */
 }
+.logo a {
+  text-decoration: none; /* يشيل الخط */
+  color: #950da8e1;       /* يخلي اللون نفس لون اللوغو */
+  font-weight: bold;
+}
+
+.logo a:hover {
+  color: #8a27c0c9; /* لون عند المرور عليه */
+}

@@ -433,11 +433,7 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
   }
 }
 /* ===== هيدر خاص للهاتف ===== */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: nowrap;          /* ممنوع يكسر للسطر */
-    justify-content: space-between;
-  }
+
 
   nav .logo a {
     font-size: 1em;             /* نص اللوجو أصغر شوي */
@@ -458,4 +454,39 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
     font-size: 0.85em;          /* نص أصغر عشان يكفي */
     padding: 5px 8px;           /* مسافة داخلية أصغر */
   }
+/* زر الهامبرجر مخفي افتراضياً */
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
 }
+
+/* الهيدر على الموبايل */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* نخفي الروابط */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* تحت الهيدر */
+    right: 20px;
+    background: rgba(0,0,0,0.9);
+    padding: 15px;
+    border-radius: 10px;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: block; /* نظهر زر ☰ */
+  }
+
+  nav ul.show {
+    display: flex; /* يظهر القائمة لما نضغط */
+  }
+}
+

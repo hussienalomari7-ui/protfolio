@@ -343,3 +343,45 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
   }
 }
 
+/* الهواتف */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;   /* يخلي الصورة والنص فوق بعض */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-img img {
+    width: 100%;   /* الصورة تاخد عرض الشاشة */
+    max-width: 300px;
+  }
+
+  nav ul {
+    flex-direction: column; /* القائمة تنزل تحت بعض */
+    gap: 10px;
+  }
+}
+
+/* الآيباد (شاشات متوسطة) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .hero-img img {
+    max-width: 400px;
+  }
+}
+
+/* اللابتوبات والشاشات الكبيرة */
+@media (min-width: 1025px) {
+  .hero {
+    flex-direction: row;
+    padding: 60px 10%;
+  }
+
+  .hero-img img {
+    max-width: 650px;
+  }
+}

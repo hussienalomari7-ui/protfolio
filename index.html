@@ -35,7 +35,7 @@
       <img src="gpjh.jpg" alt="صورتي الشخصية">
     </div>
     <div class="hero-text" data-aos="fade-left">
-      <h2> Hello, I'm Hussein Alomari </h2>
+      <h2> Hoş geldin, Ben Hüseyin'im vefa </h2>
       <p class="english-text">
         I am Hussein, your friend, a 20-year-old ambitious young man.  
         I strive to develop myself in the world of programming, especially in the field of Front-End development.  
@@ -134,14 +134,38 @@
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> إرسال</button>
     </form>
     <!-- 🔹 قسم الفيديو -->
-    <div class="video-section" data-aos="fade-up">
-    <video width="600" autoplay loop muted playsinline>
-    <source src="video.mp4" type="video/mp4">
+ <div class="video-section" style="position: relative; display: inline-block;">
+  <video id="myVideo" autoplay loop muted playsinline style="width:600px; border-radius:10px;">
+    <source src="wepp.MOV" type="video/mp4">
     متصفحك لا يدعم تشغيل الفيديو.
-    </video>
+  </video>
 
-    </video>
-    </div>
+  <!-- أيقونة الصوت -->
+  <div id="soundIcon" class="sound-icon">
+    <i class="fas fa-volume-mute"></i>
+  </div>
+</div>
+
+<script>
+  const video = document.getElementById('myVideo');
+  const soundIcon = document.getElementById('soundIcon').querySelector('i');
+
+  // عند الضغط تتبدل الأيقونة والحالة
+  document.getElementById('soundIcon').addEventListener('click', () => {
+    if (video.muted) {
+      video.muted = false;
+      soundIcon.classList.remove('fa-volume-mute');
+      soundIcon.classList.add('fa-volume-up');
+    } else {
+      video.muted = true;
+      soundIcon.classList.remove('fa-volume-up');
+      soundIcon.classList.add('fa-volume-mute');
+    }
+  });
+</script>
+
+
+
 
     </section>
 

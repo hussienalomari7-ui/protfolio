@@ -29,10 +29,11 @@ nav {
   align-items: center;
 }
 
-nav .logo {
-  font-size: 1.6em;
+nav .logo a {
+  font-size: 1.1em;
   font-weight: bold;
   color: hsl(299, 89%, 35%);
+  text-decoration: none;
 }
 
 nav ul {
@@ -64,18 +65,17 @@ nav ul li a:hover {
 }
 
 .hero-img img {
-  width: 650px;
+  width:400px;
   border-radius: 20px;
   box-shadow: 0px 8px 15px rgba(0,0,0,0.5);
   animation: pulse 3s infinite;
 }
-/* فقرة النص الإنجليزي */
+
 .english-text {
-  font-style: italic;       /* خط مائل */
-  color: #dcdcdc;           /* لون رمادي فاتح أنيق */
+  font-style: italic;
+  color: #dcdcdc;
   margin-top: 10px;
 }
-
 
 @keyframes pulse {
   0% { transform: scale(1); }
@@ -124,11 +124,6 @@ nav ul li a:hover {
   gap: 30px;
   justify-items: center;
 }
-.skill-box i.fa-terminal {
-  color: #2ecc71; /* أخضر أنيق */
-}
-
-
 
 .skill-box {
   background: #414465;
@@ -143,6 +138,14 @@ nav ul li a:hover {
   font-size: 3em;
   margin-bottom: 10px;
   color: #a092bd;
+}
+
+.skill-box i.fa-terminal {
+  color: #2ecc71;
+}
+
+.skill-box i.fa-python {
+  color: #3776AB;
 }
 
 .skill-box:hover {
@@ -238,6 +241,56 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
+/* ===== الفيديو ===== */
+.video-section {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.video-section video {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+
+
+.video-wrapper {
+  position: relative; /* يخلي الأيقونة مرتبطة بالفيديو */
+  display: inline-block;
+}
+
+.video-wrapper video {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  display: block;
+}
+
+.sound-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 14px; /* 🔹 هنا تتحكم بالحجم */
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sound-icon:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+
 /* ===== الفوتر ===== */
 footer {
   text-align: center;
@@ -248,97 +301,45 @@ footer {
 
 footer .socials a {
   margin: 0 10px;
-  color: #ef233c;
   font-size: 1.5em;
   transition: 0.3s;
 }
 
-footer .socials a:hover {
-  color: #fff;
-}
-/* 🎨 ألوان خاصة بكل أيقونة */
-footer .socials a i.fa-github {
-  color: #333; /* رمادي غامق */
-}
-
-footer .socials a i.fa-linkedin {
-  color: #0A66C2; /* أزرق لينكدإن */
-}
-
+footer .socials a i.fa-github { color: #333; }
+footer .socials a i.fa-linkedin { color: #0A66C2; }
 footer .socials a i.fa-instagram {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, 
               #fd5949 45%, #d6249f 60%, #285AEB 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-footer .socials a i.fa-medium {
-  color: #000; /* أسود */
-}
-footer .socials a i.fa-envelope {
-  color: #c86e6e; /* أحمر Gmail */
-}
-.video-section {
-  text-align: center;
-  margin: 40px 0;
+footer .socials a i.fa-medium { color: #000; }
+footer .socials a i.fa-envelope { color: #c86e6e; }
+
+/* ===== الموبايل (Responsive) ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8em;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 10px 5px;
+  }
 }
 
-.video-section h3 {
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.video-section video {
-  width: 100%;
-  max-width: 500px;   /* أقصى عرض للفيديو */
-  aspect-ratio: 16/9; /* يحافظ على التناسق بين العرض والطول */
-  border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
-}
-.skill-box i.fa-python {
-  color: #3776AB; /* الأزرق الرسمي للبايثون */
-}
-.logo a {
-  text-decoration: none; /* يشيل الخط */
-  color: #950da8e1;       /* يخلي اللون نفس لون اللوغو */
-  font-weight: bold;
-}
-
-.logo a:hover {
-  color: #8a27c0c9; /* لون عند المرور عليه */
-}
-.sound-icon {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 11px;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  user-select: none;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.sound-icon:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: scale(1.1);
-}
-/* يخلي كل العناصر ما تطلع خارج الشاشة */
-* {
-  box-sizing: border-box;
-}
-
-/* يمنع أي سحب يمين/شمال */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* يخلي الصور والفيديو تتناسب مع حجم الشاشة */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}

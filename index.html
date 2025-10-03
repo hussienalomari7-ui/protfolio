@@ -17,9 +17,8 @@
   <header>
     <nav>
       <h1 class="logo">
-      <a href="https://hussienalomari7-ui.github.io/vefa/" target="_blank">VEFA</a>
+        <a href="https://hussienalomari7-ui.github.io/vefa/" target="_blank">VEFA</a>
       </h1>
-
       <ul>
         <li><a href="#about"> About me </a></li>
         <li><a href="#skills">My skills</a></li>
@@ -62,34 +61,27 @@
         <p>JavaScript</p>
       </div>
       <div class="skill-box" data-aos="flip-left" data-aos-delay="300">
-      <i class="fas fa-database"></i>
-      <p>SQL</p>
+        <i class="fas fa-database"></i>
+        <p>SQL</p>
       </div>
-      <!-- 🔹 مهارة C++ -->
       <div class="skill-box" data-aos="flip-left" data-aos-delay="400">
-      <i class="fas fa-code"></i>
-      <p>C++</p>
+        <i class="fas fa-code"></i>
+        <p>C++</p>
       </div>
-
-<!-- 🔹 مهارة OOP -->
-    <div class="skill-box" data-aos="flip-left" data-aos-delay="500">
- <i class="fas fa-project-diagram"></i>
-    <p>OOP</p>
-    
-  </div>
-    <div class="skill-box" data-aos="flip-left" data-aos-delay="600">
-    <i class="fa-solid fa-terminal"></i>
-    <p>Command Line</p>
- </div>
-
-
-  <!-- 🔹 مهارة Python -->
-  <div class="skill-box" data-aos="flip-left" data-aos-delay="600">
-  <i class="fab fa-python"></i>
-  <p>Python</p>
-   </div>
-  </section>
+      <div class="skill-box" data-aos="flip-left" data-aos-delay="500">
+        <i class="fas fa-project-diagram"></i>
+        <p>OOP</p>
+      </div>
+      <div class="skill-box" data-aos="flip-left" data-aos-delay="600">
+        <i class="fa-solid fa-terminal"></i>
+        <p>Command Line</p>
+      </div>
+      <div class="skill-box" data-aos="flip-left" data-aos-delay="700">
+        <i class="fab fa-python"></i>
+        <p>Python</p>
+      </div>
     </div>
+  </section>
 
   <!-- 🔹 قسم المشاريع -->
   <section id="projects" class="projects">
@@ -102,7 +94,6 @@
         <a href="https://hussienalomari7-ui.github.io/Password-generator/"><i class="fa-solid fa-link"></i> شاهد المشروع</a>
       </div>
 
-
       <div class="project-card" data-aos="fade-up" data-aos-delay="150">
         <img src="blog.jpg" alt="مشروع 2">
         <h3> My blog </h3>
@@ -110,18 +101,15 @@
         <a href="https://hussienalomari7-ui.github.io/Artical/"><i class="fa-solid fa-link"></i> شاهد المشروع</a>
       </div>
 
-
-
       <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-      <img src="c++.jpg" alt="Expense Tracker">
-      <h3>Expense Tracker (C++)</h3>
-      <p>برنامج بسيط لتتبع المصاريف الأسبوعية وحساب الإحصاءات باستخدام لغة C++.</p> 
-      <a href="https://github.com/hussienalomari7-ui/C-Skill" target="_blank">
-      <i class="fa-solid fa-link"></i> شاهد المشروع
-      </a>
+        <img src="c++.jpg" alt="Expense Tracker">
+        <h3>Expense Tracker (C++)</h3>
+        <p>برنامج بسيط لتتبع المصاريف الأسبوعية وحساب الإحصاءات باستخدام لغة C++.</p> 
+        <a href="https://github.com/hussienalomari7-ui/C-Skill" target="_blank">
+          <i class="fa-solid fa-link"></i> شاهد المشروع
+        </a>
       </div>
-
-   </div>
+    </div>
   </section>
 
   <!-- 🔹 قسم التواصل -->
@@ -133,65 +121,62 @@
       <textarea placeholder="رسالتك" required></textarea>
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> إرسال</button>
     </form>
-    <!-- 🔹 قسم الفيديو -->
- <div class="video-section" style="position: relative; display: inline-block;">
-  <video id="myVideo" autoplay loop muted playsinline style="width:600px; border-radius:10px;">
-    <source src="wepp.MOV" type="video/mp4">
-    متصفحك لا يدعم تشغيل الفيديو.
-  </video>
 
-  <!-- أيقونة الصوت -->
-  <div id="soundIcon" class="sound-icon">
-    <i class="fas fa-volume-mute"></i>
+    <!-- 🔹 قسم الفيديو -->
+    <div class="video-section">
+  <div class="video-wrapper">
+    <video id="myVideo" autoplay loop muted playsinline>
+      <source src="wepp.MOV" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+
+    <!-- أيقونة الصوت -->
+    <div id="soundIcon" class="sound-icon">
+      <i class="fas fa-volume-mute"></i>
+    </div>
   </div>
 </div>
 
-<script>
-  const video = document.getElementById('myVideo');
-  const soundIcon = document.getElementById('soundIcon').querySelector('i');
+  </section>
 
-  // عند الضغط تتبدل الأيقونة والحالة
-  document.getElementById('soundIcon').addEventListener('click', () => {
-    if (video.muted) {
-      video.muted = false;
-      soundIcon.classList.remove('fa-volume-mute');
-      soundIcon.classList.add('fa-volume-up');
-    } else {
-      video.muted = true;
-      soundIcon.classList.remove('fa-volume-up');
-      soundIcon.classList.add('fa-volume-mute');
-    }
-  });
-</script>
-
-
-
-
-    </section>
-
-    <!-- 🔹 الفوتر -->
+  <!-- 🔹 الفوتر -->
   <footer>
     <p>© 2025 Hussein | جميع الحقوق محفوظة</p>
     <div class="socials">
-  <a href="https://github.com/hussienalomari7-ui" target="_blank"><i class="fab fa-github"></i></a>
-  <a href="https://www.linkedin.com/in/h%C3%BCseyin-vefa-b8872933a" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="https://www.instagram.com/husien_vefa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://hussienalomari7.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
-  <a href="mailto:hussienalomari7@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-</div>
-
-
+      <a href="https://github.com/hussienalomari7-ui" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/h%C3%BCseyin-vefa-b8872933a" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/husien_vefa" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://hussienalomari7.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
+      <a href="mailto:hussienalomari7@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+    </div>
   </footer>
 
   <!-- مكتبة AOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="java.js"></script>
   <script>
     AOS.init({
       duration: 1200,
       once: true
     });
   </script>
-  <script src="java.js"></script>
+
+  <!-- 🔹 كود التحكم بالصوت -->
+  <script>
+    const video = document.getElementById('myVideo');
+    const soundIcon = document.getElementById('soundIcon').querySelector('i');
+
+    document.getElementById('soundIcon').addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        soundIcon.classList.remove('fa-volume-mute');
+        soundIcon.classList.add('fa-volume-up');
+      } else {
+        video.muted = true;
+        soundIcon.classList.remove('fa-volume-up');
+        soundIcon.classList.add('fa-volume-mute');
+      }
+    });
+  </script>
+
 </body>
 </html>

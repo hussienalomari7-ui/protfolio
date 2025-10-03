@@ -385,3 +385,77 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
     max-width: 650px;
   }
 }
+
+
+/* ===== الهواتف ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: row;   /* ✨ نخلي الصورة والنص جنب بعض */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;             /* مسافة أصغر بين الصورة والنص */
+    padding: 20px;
+  }
+
+  .hero-img img {
+    width: 45%;            /* الصورة تاخد نصف العرض تقريبا */
+    max-width: 180px;      /* ما تكبر زيادة */
+    border-radius: 10px;
+  }
+
+  .hero-text {
+    width: 55%;            /* النص ياخد باقي المساحة */
+    text-align: left;      /* خلي النص لليسار مثل الكمبيوتر */
+  }
+
+  .hero-text h2 {
+    font-size: 1.2em;      /* حجم أصغر للعناوين */
+    margin-bottom: 10px;
+  }
+
+  .hero-text p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  nav ul li {
+    margin: 5px;
+  }
+}
+/* ===== هيدر خاص للهاتف ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: nowrap;          /* ممنوع يكسر للسطر */
+    justify-content: space-between;
+  }
+
+  nav .logo a {
+    font-size: 1em;             /* نص اللوجو أصغر شوي */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;        /* الروابط تظل جنب بعض */
+    flex-wrap: nowrap;          /* ما ينزلوا تحت بعض */
+    gap: 8px;                   /* مسافة صغيرة بينهم */
+  }
+
+  nav ul li {
+    margin: 0;                  /* نشيل المسافة الزايدة */
+  }
+
+  nav ul li a {
+    font-size: 0.85em;          /* نص أصغر عشان يكفي */
+    padding: 5px 8px;           /* مسافة داخلية أصغر */
+  }
+}

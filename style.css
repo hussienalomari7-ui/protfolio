@@ -345,22 +345,55 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
 
 /* الهواتف */
 @media (max-width: 768px) {
+  /* ترتيب الصورة والنص جنب بعض */
   .hero {
-    flex-direction: column;   /* يخلي الصورة والنص فوق بعض */
-    text-align: center;
-    padding: 20px;
+    flex-direction: row;             /* ✅ جنب بعض */
+    align-items: center;
+    justify-content: center;
+    gap: 18px;                       /* مسافة بينهم */
+    padding: 25px 15px;
   }
 
+  /* الصورة */
   .hero-img img {
-    width: 100%;   /* الصورة تاخد عرض الشاشة */
-    max-width: 300px;
+    width: 80%;                      /* تاخد مساحة أكبر داخل الحاوية */
+    max-width: 280px;                /* عرض فعلي مناسب للمستطيل الأصفر */
+    height: auto;                    /* يحافظ على النسبة الأصلية */
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+  }
+
+  /* النص */
+  .hero-text {
+    width: 55%;                      /* ياخد النص نصف العرض تقريبًا */
+    text-align: left;                /* بنفس شكل الكمبيوتر */
+  }
+
+  .hero-text h2 {
+    font-size: 1.3em;
+    margin-bottom: 8px;
+  }
+
+  .hero-text p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
   }
 
   nav ul {
-    flex-direction: column; /* القائمة تنزل تحت بعض */
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  nav ul li {
+    margin: 5px;
   }
 }
+
 
 /* الآيباد (شاشات متوسطة) */
 @media (min-width: 769px) and (max-width: 1024px) {

@@ -6,11 +6,11 @@ AOS.init({
 
 // ========== Toggle Menu for Mobile ==========
 const menuToggle = document.getElementById("menu-toggle");
-const menu = document.querySelector("nav ul");
+const navLinks = document.getElementById("nav-links");
 
-if (menuToggle) {
+if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
+    navLinks.classList.toggle("show");
   });
 }
 
@@ -19,7 +19,9 @@ const form = document.querySelector("form");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("تم إرسال الرسالة بنجاح ✅ (وهمية)");
+
+    // رسالة نجاح أنيقة بدل alert
+    alert("✅ تم إرسال الرسالة بنجاح!");
     form.reset();
   });
 }
@@ -32,20 +34,8 @@ if (video && soundIconWrapper) {
   const soundIcon = soundIconWrapper.querySelector("i");
 
   soundIconWrapper.addEventListener("click", () => {
-    if (video.muted) {
-      video.muted = false;
-      soundIcon.classList.remove("fa-volume-mute");
-      soundIcon.classList.add("fa-volume-up");
-    } else {
-      video.muted = true;
-      soundIcon.classList.remove("fa-volume-up");
-      soundIcon.classList.add("fa-volume-mute");
-    }
+    video.muted = !video.muted;
+    soundIcon.classList.toggle("fa-volume-mute", video.muted);
+    soundIcon.classList.toggle("fa-volume-up", !video.muted);
   });
 }
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});

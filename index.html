@@ -160,18 +160,11 @@
 
   <!-- مكتبة AOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true
-    });
-  </script>
 
+ 
   <!-- 🔹 كود التحكم بالصوت -->
   <script>
-    const video = document.getElementById('myVideo');
-    const soundIcon = document.getElementById('soundIcon').querySelector('i');
-
+   
     document.getElementById('soundIcon').addEventListener('click', () => {
       if (video.muted) {
         video.muted = false;

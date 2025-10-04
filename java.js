@@ -1,3 +1,4 @@
+
 // ========== AOS Animation ==========
 AOS.init({
   duration: 1200,
@@ -19,8 +20,6 @@ const form = document.querySelector("form");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    // رسالة نجاح أنيقة بدل alert
     alert("✅ تم إرسال الرسالة بنجاح!");
     form.reset();
   });
@@ -34,8 +33,22 @@ if (video && soundIconWrapper) {
   const soundIcon = soundIconWrapper.querySelector("i");
 
   soundIconWrapper.addEventListener("click", () => {
-    video.muted = !video.muted;
-    soundIcon.classList.toggle("fa-volume-mute", video.muted);
-    soundIcon.classList.toggle("fa-volume-up", !video.muted);
+    if (video.muted) {
+      // فك الكتم وتشغيل الصوت
+      video.muted = false;
+      video.volume = 1.0; // تأكد من رفع الصوت
+      soundIcon.classList.remove("fa-volume-mute");
+      soundIcon.classList.add("fa-volume-up");
+
+      // بعض المتصفحات تحتاج إعادة تشغيل بعد فك الكتم
+      video.play().catch(() => {
+        console.warn("المتصفح منع التشغيل التلقائي، اضغط مرة أخرى.");
+      });
+    } else {
+      // كتم الصوت
+      video.muted = true;
+      soundIcon.classList.remove("fa-volume-up");
+      soundIcon.classList.add("fa-volume-mute");
+    }
   });
 }

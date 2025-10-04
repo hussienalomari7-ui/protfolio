@@ -398,9 +398,9 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
   }
 
   .hero-img img {
-    width: 62%;            /* الصورة تاخد نصف العرض تقريبا */
-    max-width: 250px;      /* ما تكبر زيادة */
-    border-radius: 17px;
+    width: 75%;            /* الصورة تاخد نصف العرض تقريبا */
+    max-width: 310px;      /* ما تكبر زيادة */
+    border-radius: 25px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.4);
   }
 

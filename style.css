@@ -439,3 +439,22 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
   cursor: pointer;
 }
 
+/* ===== إخفاء الهيدر على الموبايل (يظهر فقط VEFA) ===== */
+@media (max-width: 768px) {
+  /* نخفي كل عناصر الهيدر ما عدا اللوجو */
+  nav ul,
+  .menu-toggle {
+    display: none !important;
+  }
+
+  nav .logo {
+    margin: auto;
+  }
+
+  nav .logo a {
+    display: block;
+    text-align: center;
+    font-size: 1.5em; /* تكبير بسيط */
+    color: hsla(275, 80%, 42%, 0.76);
+  }
+}

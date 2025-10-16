@@ -316,62 +316,31 @@ footer .socials a i.fa-instagram {
 footer .socials a i.fa-medium { color: #000; }
 footer .socials a i.fa-envelope { color: #c86e6e; }
 
-/* ===== الموبايل (Responsive) ===== */
+/* ===== الموبايل (شاشات صغيرة) ===== */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px 15px;
     text-align: center;
   }
 
   .hero-img img {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
+    width: 85%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
   }
 
-  .hero-text h2 {
-    font-size: 1.8em;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 10px 5px;
-  }
-}
-
-/* الهواتف */
-@media (max-width: 768px) {
-  /* ترتيب الصورة والنص جنب بعض */
-  .hero {
-    flex-direction: row;             /* ✅ جنب بعض */
-    align-items: center;
-    justify-content: center;
-    gap: 18px;                       /* مسافة بينهم */
-    padding: 25px 15px;
-  }
-
-  /* الصورة */
-  .hero-img img {
-    width: 80%;                      /* تاخد مساحة أكبر داخل الحاوية */
-    max-width: 280px;                /* عرض فعلي مناسب للمستطيل الأصفر */
-    height: auto;                    /* يحافظ على النسبة الأصلية */
-    border-radius: 18px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.45);
-  }
-
-  /* النص */
   .hero-text {
-    width: 55%;                      /* ياخد النص نصف العرض تقريبًا */
-    text-align: left;                /* بنفس شكل الكمبيوتر */
+    width: 90%;
   }
 
   .hero-text h2 {
-    font-size: 1.3em;
-    margin-bottom: 8px;
+    font-size: 1.4em;
+    margin-bottom: 10px;
   }
 
   .hero-text p {
@@ -380,19 +349,38 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
   }
 
   .btn {
-    padding: 8px 16px;
-    font-size: 0.9em;
+    padding: 10px 18px;
+    font-size: 1em;
   }
 
   nav ul {
-    flex-wrap: wrap;
-    gap: 5px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0,0,0,0.9);
+    padding: 15px;
+    border-radius: 10px;
+    gap: 10px;
   }
 
-  nav ul li {
-    margin: 5px;
+  nav ul li a {
+    font-size: 1em;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul.show {
+    display: flex;
   }
 }
+
+
+
 
 
 /* الآيباد (شاشات متوسطة) */
@@ -420,52 +408,7 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
 }
 
 
-/* ===== الهواتف ===== */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: row;   /* ✨ نخلي الصورة والنص جنب بعض */
-    align-items: center;
-    justify-content: center;
-    gap: 15px;             /* مسافة أصغر بين الصورة والنص */
-    padding: 20px;
-  }
 
-  .hero-img img {
-    width: 75%;            /* الصورة تاخد نصف العرض تقريبا */
-    max-width: 310px;      /* ما تكبر زيادة */
-    border-radius: 25px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-  }
-
-  .hero-text {
-    width: 55%;            /* النص ياخد باقي المساحة */
-    text-align: left;      /* خلي النص لليسار مثل الكمبيوتر */
-  }
-
-  .hero-text h2 {
-    font-size: 1.2em;      /* حجم أصغر للعناوين */
-    margin-bottom: 10px;
-  }
-
-  .hero-text p {
-    font-size: 0.9em;
-    line-height: 1.4;
-  }
-
-  .btn {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-
-  nav ul li {
-    margin: 5px;
-  }
-}
 /* ===== هيدر خاص للهاتف ===== */
 
 
@@ -494,33 +437,5 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
   font-size: 1.5em;
   color: #fff;
   cursor: pointer;
-}
-
-/* الهيدر على الموبايل */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* نخفي الروابط */
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* تحت الهيدر */
-    right: 20px;
-    background: rgba(0,0,0,0.9);
-    padding: 15px;
-    border-radius: 10px;
-    gap: 10px;
-  }
-
-  nav ul li a {
-    font-size: 1em;
-    color: #fff;
-  }
-
-  .menu-toggle {
-    display: block; /* نظهر زر ☰ */
-  }
-
-  nav ul.show {
-    display: flex; /* يظهر القائمة لما نضغط */
-  }
 }
 

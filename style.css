@@ -453,8 +453,8 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
 
   nav .logo a {
     display: block;
-    text-align: center;
-    font-size: 1.5em; /* تكبير بسيط */
+    text-align: left;
+    font-size: 1em; /* تكبير بسيط */
     color: hsla(275, 80%, 42%, 0.76);
   }
 }

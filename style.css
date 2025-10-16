@@ -30,9 +30,9 @@ nav {
 }
 
 nav .logo a {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: bold;
-  color: hsl(299, 89%, 35%);
+  color: purple(200, 95%, 15%, 0.737);
   text-decoration: none;
 }
 
@@ -379,10 +379,6 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
   }
 }
 
-
-
-
-
 /* الآيباد (شاشات متوسطة) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero {
@@ -406,8 +402,6 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
     max-width: 650px;
   }
 }
-
-
 
 /* ===== هيدر خاص للهاتف ===== */
 
@@ -455,6 +449,6 @@ footer .socials a i.fa-envelope { color: #c86e6e; }
     display: block;
     text-align: left;
     font-size: 1em; /* تكبير بسيط */
-    color: hsla(275, 80%, 42%, 0.76);
+    color: purple(200, 80%, 42%, 0.76);
   }
 }
